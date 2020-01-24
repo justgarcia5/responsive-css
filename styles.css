@@ -1,0 +1,129 @@
+@media only screen and (max-width: 600px) {
+  * {
+    font-family: 'Open Sans bold', sans-serif;
+  }
+
+
+  body {
+    margin: 0;
+  }
+
+  .accordion {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 20px;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    text-align: center;
+    border-bottom: solid black 1px;
+  }
+
+  .accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    float: right;
+    margin-left: 5px;
+  }
+
+  button.accordion.active::after {
+    content: "\2796";
+    color: rgb(0, 0, 0);
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin: 26px;
+  }
+
+  .tabs a {
+    font-size: 40px;
+  }
+
+  .tabs p {
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 18px;
+  }
+
+  .acc-tab {
+    width: 80px;
+  }
+
+  a.acc-tab.active {
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    content: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  * {
+    font-family: 'Open Sans bold', sans-serif;
+    text-align: center;
+  }
+
+  .accordion {
+    border-radius: none;
+    font-size: 22px;
+    padding: 4px 22px;
+    width: 220px;
+    margin-top: 100px;
+  }
+
+  .panel {
+    padding: 60px 0 20px 0;
+    width: 700px;
+    margin: auto;
+    /* display: none; */
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin: 28px 140px;
+  }
+
+  .tabs a {
+    font-size: 40px;
+  }
+
+  .acc-tab p {
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 26px;
+  }
+
+  .acc-tab {
+    width: 80px;
+  }
+
+  a.acc-tab.active {
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    content: none;
+  }
+
+  .tab p {
+    margin-top: 32px;
+  }
+
+  .btn.active {
+    color: white;
+    background-color: black;
+  }
+}
