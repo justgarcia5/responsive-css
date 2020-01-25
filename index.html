@@ -1,3 +1,4 @@
+<DOCTYPE html>
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -5,7 +6,6 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 <body>
   <div id="mobile-container" class="mobile-container">
-
     <button id="btn" class="accordion btn"><b>FIT GUIDE</b></button>
     <div class="panel">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -35,17 +35,12 @@
         <div class="tab" id="modal" style="display:none">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
         </div>
-
-
     </div>
   </div>
 
-
-
   <div class="desktop-container">
-
-    <div class="tab-links-div">
-      <a class="tab-link" onClick="openDeskTab('fit-guide')">FIT GUIDE</a>
+    <div id="tab-links-div" class="tab-links-div">
+      <a class="tab-link active" onClick="openDeskTab('fit-guide')">FIT GUIDE</a>
       <a class="tab-link" onClick="openDeskTab('care')">CARE</a>
       <a class="tab-link" onClick="openDeskTab('materials')">MATERIALS</a>
     </div>
@@ -55,25 +50,25 @@
     </div>
 
     <div id="care" class="desk-tab" style="display:none">
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
     </div>
 
     <div id="materials" class="desk-tab" style="display:none">
-      <div class="inner-tab-links-div">
-        <a class="inner-tab-link" onClick="openTab('cashmere')">50%<br><p>cashmere</p></a>
-        <a class="inner-tab-link" onClick="openTab('wool')">46%<br><p>wool</p></a>
-        <a class="inner-tab-link" onClick="openTab('modal')">4%<br><p>modal</p></a>
+      <div id="inner-tab-links-div" class="inner-tab-links-div">
+        <a class="inner-tab-link active" onClick="openInnerTab('cashmere-desk')">50%<br><p>cashmere</p></a>
+        <a class="inner-tab-link" onClick="openInnerTab('wool-desk')">46%<br><p>wool</p></a>
+        <a class="inner-tab-link" onClick="openInnerTab('modal-desk')">4%<br><p>modal</p></a>
       </div>
 
-      <div class="tab" id="cashmere">
-        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="tab-desk" id="cashmere-desk">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
 
-      <div class="tab" id="wool" style="display:none">
+      <div class="tab-desk" id="wool-desk" style="display:none">
         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
 
-      <div class="tab" id="modal" style="display:none">
+      <div class="tab-desk" id="modal-desk" style="display:none">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
       </div>
     </div>
