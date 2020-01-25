@@ -1,9 +1,8 @@
 
-// accordion logic
+// accordion logic for mobile container
 let acc = document.getElementsByClassName("accordion");
-let i;
 
-for (i = 0; i < acc.length; i++) {
+for (let i = 0; i < acc.length; i++) {
   acc[i].addEventListener('click', function() {
     this.classList.toggle('active');
     let panel = this.nextElementSibling;
@@ -15,7 +14,7 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-// logic to switch tabs inside accordion
+// logic to switch tabs inside accordion for mobile container
 function openTab(tab) {
   let i;
   let x = document.getElementsByClassName('tab');
@@ -25,34 +24,36 @@ function openTab(tab) {
   document.getElementById(tab).style.display = 'block';
 }
 
-// logic that changes class to and from acive inside acc-tab elem
-let tabContainer = document.getElementById('tabs');
-let tabs = tabContainer.getElementsByClassName('acc-tab');
+// logic for active tabs for inner accordion mobile view
+let accTabsContainer = document.getElementById("tabs");
+let accTab = accTabsContainer.getElementsByClassName("acc-tab");
 
-for (let i = 0; i < tabs.length; i++) {
-  tabs[i].addEventListener('click', function() {
-    let current = document.getElementsByClassName('acc-tab active');
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace(' active', '');
-    }
-    this.className += ' active';
+for (let i = 0; i < accTab.length; i++) {
+  accTab[i].addEventListener("click", function() {
+    let current = document.getElementsByClassName("acc-tab active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
   });
 }
 
 
-// let btnsContainer = document.getElementById('container');
-// let btns = btnsContainer.getElementsByClassName('btn');
-// // console.log(btns)
+function openDeskTab(tabId) {
+  let x;
+  let tabs = document.getElementsByClassName("desk-tab");
+  for (x = 0; x < tabs.length; x++) {
+    tabs[x].style.display = "none";
+  }
+  document.getElementById(tabId).style.display = "block";
+}
 
-// for (let i = 0; i < btns.length; i++) {
-//   btns[i].addEventListener('click', function() {
-//     let current = document.getElementsByClassName('btn active');
-//     console.log(current)
-//     if (current.length > 0) {
-//       // tabs[i].style.display = 'none'
-//       current[0].className = current[0].className.replace(' active', '');
-//     }
-//     this.className += ' active';
-//     // document.getElementById("pannel").style.display = 'block';
-//   });
-// }
+
+function openInnerTab(tabId) {
+  let x;
+  let innerTabs = document.getElementsByClassName("inner-tab");
+  // console.log(innerTabs)
+
+  for (x = 0; x < innerTabs.length; x++) {
+    innerTabs[x].style.display = "none";
+  }
+  document.getElementById(tabId).style.display = "block";
+}
